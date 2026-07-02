@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-book-theme="midnight">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Legere · Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Legere browser extension and reading service.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230d0d0d'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='44' text-anchor='middle' fill='%23e5c07b'%3EL%3C/text%3E%3C/svg%3E">
+<script>
+  document.documentElement.setAttribute('data-book-theme',
+    localStorage.getItem('legere.reader.bookTheme') === 'sepia' ? 'sepia' : 'midnight');
+</script>
+<style>
+  :root[data-book-theme="midnight"]{
+    color-scheme:dark;
+    --bg:#0d0d0d; --text:#d4d4d4; --soft:#9a9486; --rule:#252525; --accent:#e5c07b;
+  }
+  :root[data-book-theme="sepia"]{
+    color-scheme:light;
+    --bg:#f8f0dc; --text:#4a3f2e; --soft:#8a7a5f; --rule:rgba(74,63,46,.16); --accent:#b07c2e;
+  }
+  body{margin:0;background:var(--bg);color:var(--text);font:18px/1.65 Georgia,'Times New Roman',serif;}
+  main{max-width:44rem;margin:0 auto;padding:4rem 1.5rem 6rem;}
+  h1{font-size:2rem;font-weight:600;margin:0 0 .25rem;}
+  h2{font-size:1.2rem;font-weight:600;margin:2.5rem 0 .75rem;border-bottom:1px solid var(--rule);padding-bottom:.4rem;}
+  .updated{color:var(--soft);font-size:.9rem;margin-bottom:2.5rem;}
+  a{color:var(--accent);}
+  ul{padding-left:1.3rem;}
+  li{margin:.35rem 0;}
+</style>
+</head>
+<body>
+<main>
+  <h1>Legere Privacy Policy</h1>
+  <p class="updated">Last updated: July 2, 2026</p>
+
+  <p>Legere is a reader: it saves web pages, PDFs, and EPUBs into a personal
+  library and lets you read, highlight, and track progress across your
+  devices. This policy describes what data the Legere browser extension and
+  its sync service handle, and why.</p>
+
+  <h2>What we collect and store</h2>
+  <ul>
+    <li><strong>Account information.</strong> When you sign in with Google we
+    receive your email address and basic profile identifier. This is used only
+    to identify your account and your library. We never see your Google
+    password.</li>
+    <li><strong>Content you choose to save.</strong> When you open a page in
+    the reader or save it to your library, the article content, its URL and
+    metadata, your highlights, notes, reading progress, and study flashcards
+    are stored in your library so they sync across your devices. EPUB and PDF
+    files you add are stored as files in your library.</li>
+    <li><strong>Library lookups on pages you visit.</strong> So that your
+    saved highlights and reading position appear automatically when you
+    return to a page, the extension (while you are signed in) asks your own
+    library whether the current page has been saved. This lookup sends the
+    page's URL to your account's backend. It is authenticated to your
+    account, used only to answer "is this page in my library?", and is not
+    stored: pages you don't save leave no record. Signed out, no lookups
+    happen.</li>
+    <li><strong>Error reports.</strong> If the extension crashes or hits an
+    internal error, a technical report (error message, stack trace, extension
+    version, and — when relevant to the error — the address of the page
+    involved) is sent to Sentry, our error-monitoring provider. These reports
+    are not used for advertising or profiling.</li>
+  </ul>
+
+  <h2>What we do NOT collect</h2>
+  <ul>
+    <li>We do not keep a history of your browsing. Beyond the transient
+    library lookup described above, the extension acts on a page only when
+    you invoke it (reader, highlight, save), and no browsing history is
+    stored anywhere.</li>
+    <li>No advertising, no analytics profiles, no sale or sharing of your data
+    with third parties for their own purposes.</li>
+    <li>No data is used for creditworthiness, lending, or any purpose
+    unrelated to the reading service itself.</li>
+  </ul>
+
+  <h2>Where your data lives</h2>
+  <ul>
+    <li>Your library is stored with <a href="https://www.convex.dev">Convex</a>
+    (backend database) in the EU (eu-west-1 region), and uploaded files
+    (EPUB/PDF) with Cloudflare R2.</li>
+    <li>The extension also keeps local caches on your device (saved article
+    bodies, book/PDF files) so your library opens instantly and works
+    offline.</li>
+  </ul>
+
+  <h2>Data retention and deletion</h2>
+  <p>Your library is retained until you delete it. You can remove individual
+  items from your library at any time. To delete your account and all
+  associated data, open an issue at
+  <a href="https://github.com/Sancerro/legere-site/issues">github.com/Sancerro/legere-site</a>
+  (or use the support contact on the extension's store listing) and it will
+  be removed.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy changes materially, the "Last updated" date above will
+  change and the new version will be published at this address.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy: open an issue at
+  <a href="https://github.com/Sancerro/legere-site/issues">github.com/Sancerro/legere-site</a>,
+  or use the support contact on the extension's store listing.</p>
+</main>
+</body>
+</html>
